@@ -94,6 +94,14 @@ fn main() {
     println!("String Lenght : {}", st6.len()); //Gives us the lenght of a string
 
     st5.clear();  //Deletes the string
+    
+    let st6 = String::from("Just a");
+    let st7 = String::from("Black man shaking his booty.");
+    let st8 = st6 + &st7;
+
+    for char in st8.bytes(){
+        println!("{}", char);
+    }
 }
 
 fn test() {
