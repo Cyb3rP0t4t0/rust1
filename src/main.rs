@@ -66,15 +66,34 @@ fn main() {
     println!("{}", num);
     
     let mut st1 = String::new();
-    st1.push('A');
-    st1.push_str("word");
+    st1.push('A'); //Adds an A
+    st1.push_str("word"); //Same but adds  it to the end 
 
     for word in st1.split_whitespace(){
         println!("{}", word);
-    }
+    }  //No spaces
 
-    let st2 = st1.replace("A", "Another");
+    let st2 = st1.replace("A", "Another");  //Gets a value and replaces one
     println!("{}", st2);
+    
+    
+    let st3 = String::from("x r t z k k a m c d");
+    let mut v1: Vec<char> = st3.chars().collect(); //A vector gets the string.
+    v1.sort();  //It sorts them
+    v1.dedup();  //Removes duplicates
+
+    for char in v1 {
+        println!("{}", char);
+    }   //Prints out
+
+    let st4 = "Random string";
+    let mut st5 = st4.to_string();
+    println!("{}", st5);
+
+    let st6 = &st5[0..6];
+    println!("String Lenght : {}", st6.len()); //Gives us the lenght of a string
+
+    st5.clear();  //Deletes the string
 }
 
 fn test() {
